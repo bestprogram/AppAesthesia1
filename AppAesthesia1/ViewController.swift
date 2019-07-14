@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        navigationController?.navigationBar.barTintColor = UIColor(hexString: "C35A04")
+        
+        
     }
 
 
