@@ -242,6 +242,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="EingangsTableView" destination="ih4-gi-QQX" id="RCE-Hb-c3H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JeG-os-U0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
