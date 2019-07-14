@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        navigationController?.navigationBar.barTintColor = UIColor(hexString: "C35A04")
+        navigationController?.navigationBar.barTintColor = UIColor(hexString: "6E3603")
         
         
     }
