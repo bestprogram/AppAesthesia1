@@ -114,7 +114,7 @@
         <!--Log In-->
         <scene sceneID="SVn-95-27L">
             <objects>
-                <viewController title="Log In" id="axU-3x-Ig4" sceneMemberID="viewController">
+                <viewController title="Log In" id="axU-3x-Ig4" customClass="LogInViewController" customModule="AppAesthesia1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tje-Nx-jcQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,7 +147,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="UxD-Oq-jhr" kind="show" identifier="gehe" id="X0l-ck-L3M"/>
+                                            <action selector="logInPressed:" destination="axU-3x-Ig4" eventType="touchUpInside" id="6uB-b0-aCM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -167,10 +167,15 @@
                         <viewLayoutGuide key="safeArea" id="JL9-JN-JXi"/>
                     </view>
                     <navigationItem key="navigationItem" title="Log In" id="nvz-mt-Pbf"/>
+                    <connections>
+                        <outlet property="emailTextfield" destination="Pbd-DC-WF6" id="REh-xR-6VG"/>
+                        <outlet property="passwordTextfield" destination="bdh-Sm-T3K" id="kuW-B7-agn"/>
+                        <segue destination="UxD-Oq-jhr" kind="push" identifier="geheZuModus" id="rbh-b3-stc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6G-13-c6D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2116" y="3"/>
+            <point key="canvasLocation" x="2296" y="635"/>
         </scene>
         <!--ModusViewController-->
         <scene sceneID="4pK-qp-hh3">
@@ -236,7 +241,6 @@
                                         </state>
                                         <connections>
                                             <action selector="registerPressed:" destination="nsK-tG-S9T" eventType="touchUpInside" id="hBU-fN-BGw"/>
-                                            <segue destination="UxD-Oq-jhr" kind="push" identifier="geheZuModus" id="yTp-do-Mdf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -259,6 +263,7 @@
                     <connections>
                         <outlet property="emailTextfield" destination="GLQ-Dm-Hor" id="dEq-3E-iF9"/>
                         <outlet property="passwordTextfield" destination="fcs-uM-Lj7" id="n9d-A9-BeN"/>
+                        <segue destination="UxD-Oq-jhr" kind="push" identifier="geheZuModus" id="pAO-ce-x29"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJk-vt-6Qa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -289,6 +294,6 @@
         <image name="stain-1831699_1920" width="1920" height="1920"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OGE-fR-gbQ"/>
+        <segue reference="pAO-ce-x29"/>
     </inferredMetricsTieBreakers>
 </document>

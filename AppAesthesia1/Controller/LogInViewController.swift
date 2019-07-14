@@ -1,5 +1,5 @@
 //
-//  RegisterViewController.swift
+//  LogInViewController.swift
 //  AppAesthesia1
 //
 //  Created by Christian Popp on 14.07.19.
@@ -7,41 +7,31 @@
 //
 
 import UIKit
-import ChameleonFramework
 import Firebase
 
+class LogInViewController: UIViewController {
 
-class RegisterViewController: UIViewController {
-
-    // Email und Password Outlets
+    // Textfields pre- linked with IBOutlets
     
     @IBOutlet var emailTextfield: UITextField!
     @IBOutlet var passwordTextfield: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
     
-
-    @IBAction func registerPressed(_ sender: UIButton) {
-    
-    // Neuen User auf Firebas Database erzeugen
+    @IBAction func logInPressed(_ sender: UIButton) {
         
-        FIRAuth.auth()?.createUser(withEmail: emailTextfield.text!, password: passwordTextfield.text!, completion: { (user, error) in
+        FIRAuth.auth()?.signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!, completion: { (user, error) in
             if error != nil {
                 print(error!)
             }else{
-                // sucess
-                print("Registration successful!")
+                // success
+                print("Login successful!")
                 
                 self.performSegue(withIdentifier: "geheZuModus", sender: self)
             }
         })
         
     }
-    
-
 }

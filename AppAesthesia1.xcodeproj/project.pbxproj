@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0440570D22DB0D7C0050B4BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 049D499522DB073700BA62E8 /* GoogleService-Info.plist */; };
 		0464F6C822DA73C500FB2AD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464F6C722DA73C500FB2AD5 /* AppDelegate.swift */; };
 		0464F6CA22DA73C500FB2AD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464F6C922DA73C500FB2AD5 /* ViewController.swift */; };
 		0464F6CD22DA73C500FB2AD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0464F6CB22DA73C500FB2AD5 /* Main.storyboard */; };
@@ -16,6 +15,8 @@
 		0464F6D522DA73C600FB2AD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0464F6D322DA73C600FB2AD5 /* LaunchScreen.storyboard */; };
 		0477BC1022DB2F5C0052FFD7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477BC0F22DB2F5C0052FFD7 /* RegisterViewController.swift */; };
 		0477BC1222DB5BA10052FFD7 /* ModusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477BC1122DB5BA10052FFD7 /* ModusViewController.swift */; };
+		0477BC1422DB69B70052FFD7 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477BC1322DB69B70052FFD7 /* LogInViewController.swift */; };
+		047D7FD122DB7DF4005DBE44 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047D7FD022DB7DF4005DBE44 /* GoogleService-Info.plist */; };
 		0E33FB6C6F7EA9C96A496024 /* Pods_AppAesthesia1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F7570737B0F84462B78D38 /* Pods_AppAesthesia1.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +31,8 @@
 		0464F6D622DA73C600FB2AD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0477BC0F22DB2F5C0052FFD7 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		0477BC1122DB5BA10052FFD7 /* ModusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModusViewController.swift; sourceTree = "<group>"; };
-		049D499522DB073700BA62E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0477BC1322DB69B70052FFD7 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		047D7FD022DB7DF4005DBE44 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1120AC4E5E7E71827A46986B /* Pods-AppAesthesia1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppAesthesia1.release.xcconfig"; path = "Target Support Files/Pods-AppAesthesia1/Pods-AppAesthesia1.release.xcconfig"; sourceTree = "<group>"; };
 		7DEE90148B8AD75D94B95C56 /* Pods-AppAesthesia1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppAesthesia1.debug.xcconfig"; path = "Target Support Files/Pods-AppAesthesia1/Pods-AppAesthesia1.debug.xcconfig"; sourceTree = "<group>"; };
 		C7F7570737B0F84462B78D38 /* Pods_AppAesthesia1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppAesthesia1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,7 +76,7 @@
 				0477BC0D22DB2E510052FFD7 /* Controller */,
 				0464F6D122DA73C600FB2AD5 /* Assets.xcassets */,
 				0464F6D622DA73C600FB2AD5 /* Info.plist */,
-				049D499522DB073700BA62E8 /* GoogleService-Info.plist */,
+				047D7FD022DB7DF4005DBE44 /* GoogleService-Info.plist */,
 				0464F6CE22DA73C500FB2AD5 /* AppAesthesia1.xcdatamodeld */,
 			);
 			path = AppAesthesia1;
@@ -90,6 +92,7 @@
 		0477BC0D22DB2E510052FFD7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0477BC1322DB69B70052FFD7 /* LogInViewController.swift */,
 				0477BC1122DB5BA10052FFD7 /* ModusViewController.swift */,
 				0464F6C722DA73C500FB2AD5 /* AppDelegate.swift */,
 				0464F6C922DA73C500FB2AD5 /* ViewController.swift */,
@@ -185,9 +188,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0464F6D522DA73C600FB2AD5 /* LaunchScreen.storyboard in Resources */,
+				047D7FD122DB7DF4005DBE44 /* GoogleService-Info.plist in Resources */,
 				0464F6D222DA73C600FB2AD5 /* Assets.xcassets in Resources */,
 				0464F6CD22DA73C500FB2AD5 /* Main.storyboard in Resources */,
-				0440570D22DB0D7C0050B4BB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +256,7 @@
 			files = (
 				0464F6CA22DA73C500FB2AD5 /* ViewController.swift in Sources */,
 				0477BC1222DB5BA10052FFD7 /* ModusViewController.swift in Sources */,
+				0477BC1422DB69B70052FFD7 /* LogInViewController.swift in Sources */,
 				0464F6C822DA73C500FB2AD5 /* AppDelegate.swift in Sources */,
 				0464F6D022DA73C500FB2AD5 /* AppAesthesia1.xcdatamodeld in Sources */,
 				0477BC1022DB2F5C0052FFD7 /* RegisterViewController.swift in Sources */,
