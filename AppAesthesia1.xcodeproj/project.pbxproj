@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0440570D22DB0D7C0050B4BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 049D499522DB073700BA62E8 /* GoogleService-Info.plist */; };
 		0464F6C822DA73C500FB2AD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464F6C722DA73C500FB2AD5 /* AppDelegate.swift */; };
 		0464F6CA22DA73C500FB2AD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464F6C922DA73C500FB2AD5 /* ViewController.swift */; };
 		0464F6CD22DA73C500FB2AD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0464F6CB22DA73C500FB2AD5 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		0464F6D122DA73C600FB2AD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0464F6D422DA73C600FB2AD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0464F6D622DA73C600FB2AD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		049D499522DB073700BA62E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1120AC4E5E7E71827A46986B /* Pods-AppAesthesia1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppAesthesia1.release.xcconfig"; path = "Target Support Files/Pods-AppAesthesia1/Pods-AppAesthesia1.release.xcconfig"; sourceTree = "<group>"; };
 		7DEE90148B8AD75D94B95C56 /* Pods-AppAesthesia1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppAesthesia1.debug.xcconfig"; path = "Target Support Files/Pods-AppAesthesia1/Pods-AppAesthesia1.debug.xcconfig"; sourceTree = "<group>"; };
 		C7F7570737B0F84462B78D38 /* Pods_AppAesthesia1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppAesthesia1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 				0464F6D122DA73C600FB2AD5 /* Assets.xcassets */,
 				0464F6D322DA73C600FB2AD5 /* LaunchScreen.storyboard */,
 				0464F6D622DA73C600FB2AD5 /* Info.plist */,
+				049D499522DB073700BA62E8 /* GoogleService-Info.plist */,
 				0464F6CE22DA73C500FB2AD5 /* AppAesthesia1.xcdatamodeld */,
 			);
 			path = AppAesthesia1;
@@ -80,7 +83,6 @@
 				7DEE90148B8AD75D94B95C56 /* Pods-AppAesthesia1.debug.xcconfig */,
 				1120AC4E5E7E71827A46986B /* Pods-AppAesthesia1.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -155,6 +157,7 @@
 				0464F6D522DA73C600FB2AD5 /* LaunchScreen.storyboard in Resources */,
 				0464F6D222DA73C600FB2AD5 /* Assets.xcassets in Resources */,
 				0464F6CD22DA73C500FB2AD5 /* Main.storyboard in Resources */,
+				0440570D22DB0D7C0050B4BB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,12 +196,18 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AppAesthesia1/Pods-AppAesthesia1-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
