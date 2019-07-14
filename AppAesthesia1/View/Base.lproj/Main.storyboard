@@ -66,7 +66,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="axU-3x-Ig4" kind="push" id="13i-FI-vWi"/>
+                                            <segue destination="axU-3x-Ig4" kind="push" identifier="geheZuLogIn" id="13i-FI-vWi"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfz-mh-SP2">
@@ -77,7 +77,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="nsK-tG-S9T" kind="push" id="3iO-nk-MXF"/>
+                                            <segue destination="nsK-tG-S9T" kind="push" identifier="geheZuRegistrierung" id="3iO-nk-MXF"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -103,6 +103,9 @@
                         <viewLayoutGuide key="safeArea" id="u91-Mh-Pr4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Willkommen" id="MEd-6T-31v"/>
+                    <connections>
+                        <segue destination="UxD-Oq-jhr" kind="push" identifier="geheZuModus" id="OGE-fR-gbQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -143,6 +146,9 @@
                                         <state key="normal" title="Log In">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="UxD-Oq-jhr" kind="show" identifier="gehe" id="X0l-ck-L3M"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -164,12 +170,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6G-13-c6D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2117.3913043478265" y="626.78571428571422"/>
+            <point key="canvasLocation" x="2116" y="3"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4pK-qp-hh3">
+            <objects>
+                <viewController id="UxD-Oq-jhr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tUG-Fb-AOQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ybj-Nz-dzr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7ha-rI-1N5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JeG-os-U0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2997" y="709"/>
         </scene>
         <!--Registrieren-->
         <scene sceneID="E9U-l6-qJl">
             <objects>
-                <viewController title="Registrieren" id="nsK-tG-S9T" sceneMemberID="viewController">
+                <viewController title="Registrieren" id="nsK-tG-S9T" customClass="RegisterViewController" customModule="AppAesthesia1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VhC-b1-mJy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -201,6 +223,10 @@
                                         <state key="normal" title="Registrieren">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerPressed:" destination="nsK-tG-S9T" eventType="touchUpInside" id="hBU-fN-BGw"/>
+                                            <segue destination="UxD-Oq-jhr" kind="push" id="yTp-do-Mdf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -219,6 +245,10 @@
                         <viewLayoutGuide key="safeArea" id="9hY-iR-5wG"/>
                     </view>
                     <navigationItem key="navigationItem" title="Registrieren" id="Wio-kx-6kw"/>
+                    <connections>
+                        <outlet property="emailTextfield" destination="GLQ-Dm-Hor" id="dEq-3E-iF9"/>
+                        <outlet property="passwordTextfield" destination="fcs-uM-Lj7" id="n9d-A9-BeN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJk-vt-6Qa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -247,4 +277,7 @@
         <image name="cappuccino-756490_1920" width="1920" height="1280"/>
         <image name="stain-1831699_1920" width="1920" height="1920"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="yTp-do-Mdf"/>
+    </inferredMetricsTieBreakers>
 </document>

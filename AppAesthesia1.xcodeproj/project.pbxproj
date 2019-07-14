@@ -14,6 +14,7 @@
 		0464F6D022DA73C500FB2AD5 /* AppAesthesia1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0464F6CE22DA73C500FB2AD5 /* AppAesthesia1.xcdatamodeld */; };
 		0464F6D222DA73C600FB2AD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0464F6D122DA73C600FB2AD5 /* Assets.xcassets */; };
 		0464F6D522DA73C600FB2AD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0464F6D322DA73C600FB2AD5 /* LaunchScreen.storyboard */; };
+		0477BC1022DB2F5C0052FFD7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477BC0F22DB2F5C0052FFD7 /* RegisterViewController.swift */; };
 		0E33FB6C6F7EA9C96A496024 /* Pods_AppAesthesia1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F7570737B0F84462B78D38 /* Pods_AppAesthesia1.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		0464F6D122DA73C600FB2AD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0464F6D422DA73C600FB2AD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0464F6D622DA73C600FB2AD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0477BC0F22DB2F5C0052FFD7 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		049D499522DB073700BA62E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1120AC4E5E7E71827A46986B /* Pods-AppAesthesia1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppAesthesia1.release.xcconfig"; path = "Target Support Files/Pods-AppAesthesia1/Pods-AppAesthesia1.release.xcconfig"; sourceTree = "<group>"; };
 		7DEE90148B8AD75D94B95C56 /* Pods-AppAesthesia1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppAesthesia1.debug.xcconfig"; path = "Target Support Files/Pods-AppAesthesia1/Pods-AppAesthesia1.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,16 +67,41 @@
 		0464F6C622DA73C500FB2AD5 /* AppAesthesia1 */ = {
 			isa = PBXGroup;
 			children = (
-				0464F6C722DA73C500FB2AD5 /* AppDelegate.swift */,
-				0464F6C922DA73C500FB2AD5 /* ViewController.swift */,
-				0464F6CB22DA73C500FB2AD5 /* Main.storyboard */,
+				0477BC0C22DB2E240052FFD7 /* Model */,
+				0477BC0E22DB2E610052FFD7 /* View */,
+				0477BC0D22DB2E510052FFD7 /* Controller */,
 				0464F6D122DA73C600FB2AD5 /* Assets.xcassets */,
-				0464F6D322DA73C600FB2AD5 /* LaunchScreen.storyboard */,
 				0464F6D622DA73C600FB2AD5 /* Info.plist */,
 				049D499522DB073700BA62E8 /* GoogleService-Info.plist */,
 				0464F6CE22DA73C500FB2AD5 /* AppAesthesia1.xcdatamodeld */,
 			);
 			path = AppAesthesia1;
+			sourceTree = "<group>";
+		};
+		0477BC0C22DB2E240052FFD7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0477BC0D22DB2E510052FFD7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0464F6C722DA73C500FB2AD5 /* AppDelegate.swift */,
+				0464F6C922DA73C500FB2AD5 /* ViewController.swift */,
+				0477BC0F22DB2F5C0052FFD7 /* RegisterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0477BC0E22DB2E610052FFD7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0464F6CB22DA73C500FB2AD5 /* Main.storyboard */,
+				0464F6D322DA73C600FB2AD5 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		7C05025C84F24770102A5E82 /* Pods */ = {
@@ -224,6 +251,7 @@
 				0464F6CA22DA73C500FB2AD5 /* ViewController.swift in Sources */,
 				0464F6C822DA73C500FB2AD5 /* AppDelegate.swift in Sources */,
 				0464F6D022DA73C500FB2AD5 /* AppAesthesia1.xcdatamodeld in Sources */,
+				0477BC1022DB2F5C0052FFD7 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
