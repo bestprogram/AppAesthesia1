@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Willkommen-->
+        <!--Willkomen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppAesthesia1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Willkomen" id="BYZ-38-t0r" customClass="ViewController" customModule="AppAesthesia1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vPf-Zd-16I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,17 +172,28 @@
             </objects>
             <point key="canvasLocation" x="2116" y="3"/>
         </scene>
-        <!--View Controller-->
+        <!--ModusViewController-->
         <scene sceneID="4pK-qp-hh3">
             <objects>
-                <viewController id="UxD-Oq-jhr" sceneMemberID="viewController">
+                <viewController title="ModusViewController" id="UxD-Oq-jhr" customClass="ModusViewController" customModule="AppAesthesia1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tUG-Fb-AOQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ybj-Nz-dzr"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7ha-rI-1N5"/>
+                    <navigationItem key="navigationItem" title="Modus" id="7ha-rI-1N5">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" style="plain" id="kuI-EL-iDv">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ijZ-P3-wog">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOutPressed:" destination="UxD-Oq-jhr" eventType="touchUpInside" id="EEa-KB-Jpc"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JeG-os-U0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -225,7 +236,7 @@
                                         </state>
                                         <connections>
                                             <action selector="registerPressed:" destination="nsK-tG-S9T" eventType="touchUpInside" id="hBU-fN-BGw"/>
-                                            <segue destination="UxD-Oq-jhr" kind="push" id="yTp-do-Mdf"/>
+                                            <segue destination="UxD-Oq-jhr" kind="push" identifier="geheZuModus" id="yTp-do-Mdf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -278,6 +289,6 @@
         <image name="stain-1831699_1920" width="1920" height="1920"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yTp-do-Mdf"/>
+        <segue reference="OGE-fR-gbQ"/>
     </inferredMetricsTieBreakers>
 </document>
