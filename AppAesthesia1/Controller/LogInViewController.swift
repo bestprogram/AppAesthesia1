@@ -22,7 +22,7 @@ class LogInViewController: UIViewController {
     
     @IBAction func logInPressed(_ sender: UIButton) {
         
-        FIRAuth.auth()?.signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!, completion: { (user, error) in
+        Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!, completion: { (user, error) in
             if error != nil {
                 print(error!)
             }else{

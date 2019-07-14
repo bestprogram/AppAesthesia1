@@ -30,7 +30,7 @@ class RegisterViewController: UIViewController {
     
     // Neuen User auf Firebas Database erzeugen
         
-        FIRAuth.auth()?.createUser(withEmail: emailTextfield.text!, password: passwordTextfield.text!, completion: { (user, error) in
+        Auth.auth().createUser(withEmail: emailTextfield.text!, password: passwordTextfield.text!, completion: { (user, error) in
             if error != nil {
                 print(error!)
             }else{

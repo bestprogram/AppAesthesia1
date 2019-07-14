@@ -19,7 +19,7 @@ class ModusViewController: UIViewController {
     
     @IBAction func logOutPressed(_ sender: UIButton) {
         do {
-            try FIRAuth.auth()?.signOut()
+            try Auth.auth().signOut()
         }catch{
             print("error: there was a problem signing out")
         }
