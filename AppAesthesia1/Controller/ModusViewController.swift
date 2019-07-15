@@ -37,6 +37,7 @@ class ModusViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let messageArray = ["Sender", "Patientenname", "Erkrankung"]
         
         cell.InformationsLAbel.text = messageArray[indexPath.row]
+        cell.SymbilImageView.image = UIImage(named: "contact")
         
         return cell
         

@@ -203,7 +203,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ih4-gi-QQX">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="724"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="79M-cu-ESu">
@@ -216,17 +216,35 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qrQ-pb-xC7">
+                                <rect key="frame" x="2" y="814" width="372" height="46"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cu-Lc-5Pt">
+                                <rect key="frame" x="374" y="814" width="42" height="46"/>
+                                <state key="normal" title="OK"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ybj-Nz-dzr" firstAttribute="bottom" secondItem="qrQ-pb-xC7" secondAttribute="bottom" constant="2" id="279-xh-FDW"/>
+                            <constraint firstItem="ybj-Nz-dzr" firstAttribute="bottom" secondItem="6cu-Lc-5Pt" secondAttribute="bottom" constant="2" id="3ba-Pt-Ngr"/>
                             <constraint firstItem="ybj-Nz-dzr" firstAttribute="trailing" secondItem="Yvz-3z-QLp" secondAttribute="trailing" id="4J6-wR-sc0"/>
                             <constraint firstItem="Yvz-3z-QLp" firstAttribute="leading" secondItem="ybj-Nz-dzr" secondAttribute="leading" id="9uI-ET-HgV"/>
+                            <constraint firstItem="6cu-Lc-5Pt" firstAttribute="trailing" secondItem="ybj-Nz-dzr" secondAttribute="trailing" constant="2" id="EQD-TW-AFC"/>
+                            <constraint firstItem="ybj-Nz-dzr" firstAttribute="trailing" secondItem="qrQ-pb-xC7" secondAttribute="trailing" constant="40" id="Pff-Zk-R2F"/>
+                            <constraint firstItem="6cu-Lc-5Pt" firstAttribute="top" secondItem="ih4-gi-QQX" secondAttribute="bottom" constant="2" id="Qd5-ri-5h1"/>
                             <constraint firstItem="ybj-Nz-dzr" firstAttribute="trailing" secondItem="ih4-gi-QQX" secondAttribute="trailing" id="SaI-2K-XcK"/>
                             <constraint firstItem="ih4-gi-QQX" firstAttribute="leading" secondItem="ybj-Nz-dzr" secondAttribute="leading" id="VVj-rY-Xi2"/>
+                            <constraint firstItem="qrQ-pb-xC7" firstAttribute="leading" secondItem="ybj-Nz-dzr" secondAttribute="leading" constant="2" id="dnR-ZQ-n2g"/>
                             <constraint firstItem="Yvz-3z-QLp" firstAttribute="top" secondItem="ybj-Nz-dzr" secondAttribute="top" id="eJl-5Z-0Qm"/>
+                            <constraint firstItem="6cu-Lc-5Pt" firstAttribute="leading" secondItem="qrQ-pb-xC7" secondAttribute="trailing" id="lkd-ne-WKH"/>
                             <constraint firstItem="ih4-gi-QQX" firstAttribute="top" secondItem="ybj-Nz-dzr" secondAttribute="top" id="mF3-FZ-KwH"/>
                             <constraint firstItem="ybj-Nz-dzr" firstAttribute="bottom" secondItem="Yvz-3z-QLp" secondAttribute="bottom" id="muG-V4-86B"/>
-                            <constraint firstItem="ybj-Nz-dzr" firstAttribute="bottom" secondItem="ih4-gi-QQX" secondAttribute="bottom" id="s0S-lg-cRa"/>
+                            <constraint firstItem="ih4-gi-QQX" firstAttribute="bottom" secondItem="ybj-Nz-dzr" secondAttribute="bottom" constant="-50" id="oiJ-Rm-SpJ"/>
+                            <constraint firstItem="qrQ-pb-xC7" firstAttribute="top" secondItem="ih4-gi-QQX" secondAttribute="bottom" constant="2" id="opq-3c-n2H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ybj-Nz-dzr"/>
                     </view>
@@ -248,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JeG-os-U0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2997" y="709"/>
+            <point key="canvasLocation" x="2995.6521739130435" y="708.48214285714278"/>
         </scene>
         <!--Registrieren-->
         <scene sceneID="E9U-l6-qJl">
@@ -340,6 +358,6 @@
         <image name="stain-1831699_1920" width="1920" height="1920"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pAO-ce-x29"/>
+        <segue reference="5bo-sC-0Uv"/>
     </inferredMetricsTieBreakers>
 </document>
