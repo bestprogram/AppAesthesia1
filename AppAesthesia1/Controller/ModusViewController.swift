@@ -9,11 +9,13 @@
 import UIKit
 import Firebase
 
-class ModusViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ModusViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
     
     @IBOutlet var EingangsTableView: UITableView!
-    
+    @IBOutlet var Constraint: NSLayoutConstraint!
+    @IBOutlet var OKButton: UIButton!
+    @IBOutlet var eingabeTextfeld: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,10 @@ class ModusViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //TODO: Set yourself as delegate and datasource here:
         EingangsTableView.delegate = self
         EingangsTableView.dataSource = self
+        
+        
+        eingabeTextfeld.delegate = self
+        
         
         //TODO: Register your CustomTableViewCell here:
         EingangsTableView.register(UINib(nibName : "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomTableViewCell")
@@ -39,6 +45,7 @@ class ModusViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.InformationsLAbel.text = messageArray[indexPath.row]
         cell.SymbilImageView.image = UIImage(named: "contact")
         
+        
         return cell
         
     }
@@ -47,6 +54,15 @@ class ModusViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return 3
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        Constraint.constant = 320
+        view.layoutIfNeeded()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
     }
     
     
