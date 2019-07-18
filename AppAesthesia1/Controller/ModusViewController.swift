@@ -17,6 +17,8 @@ class ModusViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet var OKButton: UIButton!
     @IBOutlet var eingabeTextfeld: UITextField!
     
+    var messageArray = ["Sender", "Patientenname", "Erkrankung"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,9 +29,13 @@ class ModusViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         eingabeTextfeld.delegate = self
         
+       
+        
         
         //TODO: Register your CustomTableViewCell here:
         EingangsTableView.register(UINib(nibName : "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomTableViewCell")
+        
+        
         
     }
     
@@ -40,26 +46,38 @@ class ModusViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as! CustomTableViewCell
         
-        let messageArray = ["Sender", "Patientenname", "Erkrankung"]
-        
         cell.InformationsLAbel.text = messageArray[indexPath.row]
         cell.SymbilImageView.image = UIImage(named: "contact")
-        
         
         return cell
         
     }
     
+
+    
+    
     //TODO: Declare numberOfRowsInSection here:
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 3
+        return messageArray.count
+    
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         Constraint.constant = 320
         view.layoutIfNeeded()
+        
     }
+    
+    //MARK:- Table View Dlegate Methods
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        print(messageArray[indexPath.row])
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         
@@ -79,6 +97,14 @@ class ModusViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 return
         }
         
+    }
+    
+    
+    @IBAction func OKButton(_ sender: UIButton) {
+    
+        messageArray[1] = eingabeTextfeld.text!
+        EingangsTableView.reloadData()
+        print(messageArray)
     }
     
 }
