@@ -18,6 +18,7 @@ class ModusViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet var eingabeTextfeld: UITextField!
     
     var messageArray = ["Sender", "Patientenname", "Erkrankung"]
+    var messageArrayNummer = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +50,7 @@ class ModusViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.InformationsLAbel.text = messageArray[indexPath.row]
         cell.SymbilImageView.image = UIImage(named: "contact")
         
+        
         return cell
         
     }
@@ -74,8 +76,14 @@ class ModusViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         print(messageArray[indexPath.row])
+        print(indexPath.row)
+        messageArrayNummer = indexPath.row
+        
+        
+      
         
         tableView.deselectRow(at: indexPath, animated: true)
+        tableView.cellForRow(at: indexPath)
     }
     
     
@@ -102,9 +110,11 @@ class ModusViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBAction func OKButton(_ sender: UIButton) {
     
-        messageArray[1] = eingabeTextfeld.text!
+        messageArray[messageArrayNummer] = eingabeTextfeld.text!
         EingangsTableView.reloadData()
         print(messageArray)
+        
+        
     }
     
 }
