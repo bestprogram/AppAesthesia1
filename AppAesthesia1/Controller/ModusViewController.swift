@@ -18,7 +18,7 @@ class ModusViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet var eingabeTextfeld: UITextField!
     
     var messageArray = ["Sender", "Patientenname", "Erkrankung"]
-    var messageArrayNummer = 0
+    var messageArrayNummer : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,16 +27,10 @@ class ModusViewController: UIViewController, UITableViewDelegate, UITableViewDat
         EingangsTableView.delegate = self
         EingangsTableView.dataSource = self
         
-        
         eingabeTextfeld.delegate = self
-        
-       
-        
         
         //TODO: Register your CustomTableViewCell here:
         EingangsTableView.register(UINib(nibName : "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomTableViewCell")
-        
-        
         
     }
     
@@ -55,9 +49,6 @@ class ModusViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     
-
-    
-    
     //TODO: Declare numberOfRowsInSection here:
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -66,9 +57,15 @@ class ModusViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        Constraint.constant = 320
-        view.layoutIfNeeded()
+//        Constraint.constant = 320
+//        view.layoutIfNeeded()
         
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        UIView.animate(withDuration: 0.5){
+            self.Constraint.constant = 50
+            self.view.layoutIfNeeded()
+        }
     }
     
     //MARK:- Table View Dlegate Methods
@@ -77,9 +74,13 @@ class ModusViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         print(messageArray[indexPath.row])
         print(indexPath.row)
+        
         messageArrayNummer = indexPath.row
-        
-        
+        textFieldDidBeginEditing(eingabeTextfeld)
+        UIView.animate(withDuration: 0.5){
+            self.Constraint.constant = 320
+            self.view.layoutIfNeeded()
+        }
       
         
         tableView.deselectRow(at: indexPath, animated: true)
@@ -87,9 +88,7 @@ class ModusViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        
-    }
+   
     
     
     @IBAction func logOutPressed(_ sender: UIButton) {
@@ -110,10 +109,19 @@ class ModusViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBAction func OKButton(_ sender: UIButton) {
     
-        messageArray[messageArrayNummer] = eingabeTextfeld.text!
-        EingangsTableView.reloadData()
-        print(messageArray)
-        
+        if messageArrayNummer != nil{
+            messageArray[messageArrayNummer!] = eingabeTextfeld.text!
+            EingangsTableView.reloadData()
+            print(messageArray)
+        }else{
+            print("Error")
+        }
+        textFieldDidEndEditing(eingabeTextfeld!)
+        UIView.animate(withDuration: 0.5){
+            self.Constraint.constant = 50
+            self.view.layoutIfNeeded()
+            self.eingabeTextfeld.text! = ""
+        }
         
     }
     
